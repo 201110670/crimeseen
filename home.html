@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="themes/mobiletheme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery_validate.js"></script>
+	<style>
+	#box{
+	width: 90%;
+    padding: 10px;
+	border: 5px solid gray;
+    margin: auto;
+	height:900px;
+	}
+	</style>
+</head>
+<body>
+	<div data-role="page" data-theme="a" id="home">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" ><br />
+			<img src="css/images/header1.png" style="margin-left: auto; margin-right: auto; display: block;" /><br />
+			<a href="#nav-panel"><img src="../css/images/settings.png" style="height:50px;width:50px;position:relative; float:right; margin-top:-116px;"  id="set"></a>
+		</div>
+		
+		<div data-role="content" data-theme="a">
+		<img src="css/images/3.png" style="height:100px; width:90%; margin-left: auto; margin-right: auto; display: block;" />
+		<div id="box">
+		<h4 align="justify">1.	Get to know your neighbors and all those residing in your street. They will be your partners in watching the activities in your block.</h4>
+		<h4 align="justify">2.	Organize a Street Watch composed of neighbors as members. Be concerned and cooperate in watching activities on the block and reporting unusual or suspicious behavior to the police and the Street Watch Officer.</h4>
+		<h4 align="justify">3.	Exchange names, home and work telephone numbers among members. Prepare diagram of the block or neighborhood where you belong for easy identification of households in case an emergency or crime incident occurs. The diagram should contain the house number, telephone numbers and occupants' names. The emergency and police department telephone numbers should be included in the diagram.</h4>
+		<h4 align="justify">4.	Look after you neighbor’s house when he is away and ask him to look after yours. This includes collecting your mail, newspapers and other deliveries which would indicate at a glance that no one is home.</h4>
+		<h4 align="justify">5.	Attend meetings called by your Street Watch Officer. Find out about the crime situation in your area and what you can do about them. Share information and experiences with your neighbors.</h4>
+		<h4 align="justify">6.	Get to know your police chief and members of the police station in your area. Write down the station’s emergency hotline number in a place you can easily see in case you will need police advise or assistance. Use your police force – they are ready, willing and able to keep you, your family and your neighborhood safe and sound.</h4>
+		</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">		
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#" id="post" style="background-color:#102947;"><img src="css/mid.png" height="40px" width="40px"/></a></li>
+			<li><a href="#" id="all" style="background-color:#102947;"><img src="css/globe.png" height="40px" width="40px"/></a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+</div>
+<script>
+//go to other page
+$("#post").click(function(){
+location.href="post.html";
+});
+$("#all").click(function(){
+location.href="viewmap.html";
+});
+</script>
+</body>
+</html>

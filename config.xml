@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.crimeseen.com" version="1.0">
+
+	<name>CRIME SEEN</name>
+	<description>To Observe, To Inform, To Protect</description>
+	<author>Team iTConfig</author>
+	<gap:platforms>
+		<gap:platform name="ios" />
+                <gap:platform name="android" />
+                <gap:platform name="webos" />
+                <gap:platform name="symbian.wrt" />
+                <gap:platform name="blackberry" project="widgets"/>
+	</gap:platforms>
+	
+	<icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
+	
+	<preference name="phonegap-version" value="3.3.0" />
+	
+	<access origin="*" subdomains="true" />
+	<access uri="*" subdomains="true" />
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	
+	<gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="org.apache.cordova.camera" />
+	<gap:plugin name="org.apache.cordova.media" />
+	<gap:plugin name="org.apache.cordova.media-capture" />
+	
+	<preference name="orientation" value="portrait" />
+	<preference name="fullscreen" value="true" />
+	<preference name="target-device" value="universal" />
+	
+
+</widget>
