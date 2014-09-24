@@ -1,0 +1,32 @@
+{
+    "name": "champoyradoo/chikka",
+    "type": "library",
+    "description": "A wrapper for Chikka's API",
+	"keywords": ["chikka", "sms", "philippines"],
+    "homepage": "https://github.com/champoyradoo/chikka",
+	"license": "MIT",
+	"authors": [
+        {
+            "name": "Robert Dentao",
+            "email": "theholeblack@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+		"guzzle/guzzle": "3.9.*"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "4.2.*",
+		"mockery/mockery": "0.9.*"
+	},
+    "autoload": {
+		"classmap": [
+			"tests/TestCase.php"
+		],
+        "psr-0": {
+            "Champoyradoo\\Chikka": "src/"
+        }
+    },
+	"minimum-stability": "stable"
+}
