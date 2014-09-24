@@ -7,29 +7,24 @@
 	<link rel="stylesheet" href="themes/mobiletheme.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/jquery.mobile-1.4.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery_validate.js"></script>
-	
 	<style>
-div.ex{
-    width: 93%;
-    padding: 10px;
-    border: 5px solid gray;
-}
-
-#des{
-	width: 93%;
-    padding: 10px;
-    border: 5px solid gray;
-}
-#forImage{
-width: 93%;
-    padding: 10px;
-	border: 5px solid gray;
-    margin: auto;
-	height:100px;
-}
+		div.ex{
+			width: 93%;
+			padding: 10px;
+			border: 5px solid gray;
+		}
+		#des{
+			width: 93%;
+			padding: 10px;
+			border: 5px solid gray;
+		}
+		#forImage{
+			width: 93%;
+			padding: 10px;
+			border: 5px solid gray;
+			margin: auto;
+			height:100px;
+		}
 	</style>
 </head>
 <body>
@@ -39,212 +34,51 @@ width: 93%;
 		</div>
 		<div data-role="content" data-theme="a">
 			<br />
-			
-			<form id="hideme"  action="javascript:verifyfirst()">
-			<div id="des" style="margin-top:20px;height:100px;">Description here</div>
-						<div class="ex" style="margin-top:30px;">
-						<div class="ui-btn ui-icon-user ui-btn-icon-left">
+			<form id="hideme"  action="#">
+				<div id="des" style="margin-top:20px;height:100px;">Description here</div>
+				<div class="ex" style="margin-top:30px;">
+					<div class="ui-btn ui-icon-user ui-btn-icon-left">
 						<input type="text" class="form-control" name="username" id="username"  placeholder="Username" required />
-						</div>
-						<div class="ui-btn ui-icon-lock ui-btn-icon-left">
+					</div>
+					<div class="ui-btn ui-icon-lock ui-btn-icon-left">
 						<input type="password" class="form-control" name="pass" id="lpass" placeholder="Password" required />
-						</div>
-						<input type="submit" name="submit" value="Log In" />
-						</div>
+					</div>
+					<input type="submit" name="submit" value="Log In" />
+				</div>
 			</form>
 			<div id="result"></div>
 			<h1 id="res"></h1>
 			<div class="ex" style="display:none;" id="toggle">
-<div class="ui-btn ui-icon-info ui-btn-icon-left">
-			<form id="signupform" action="javascript:registeruser();" >
-                        <b>Full Name*:</b>
-                        <input type="text" class="form-control" name="fullname" id="fullname" maxlength="150">
-                        <small id="errorfullname" style="color:#ff0000;display:block"></small>
+				<div class="ui-btn ui-icon-info ui-btn-icon-left">
+					<form id="signupform" action="#" >
+						<b>Full Name*:</b>
+						<input type="text" class="form-control" name="fullname" id="fullname" maxlength="150">
+						<small id="errorfullname" style="color:#ff0000;display:block"></small>
 						<b>E-Mail*:</b>
-                        <input type="email"  class="form-control" name="email" id="email" maxlength="50">
-                        <small id="erroremail" style="color:#ff0000;display:block"></small>
-                        <b>Username*:</b>
-                        <small style="color:#2373a5"><br>8-15 Characters, Alphanumeric Characters</small>
-                        <input type="text" class="form-control" name="username" id="username" maxlength="15">
-                        <small id="errorusername" style="color:#ff0000;display:block"></small>
-                        <b>Password*:</b>
-                        <small style="color:#2373a5"><br>8-15 Characters, Alphanumeric Characters</small>
-                        <input type="password" class="form-control" name="pass" id="pass" maxlength="15">
-                        <small id="errorpass" style="color:#ff0000;display:block"></small>
-                        <b>Confirm Password*:</b>
-                        <input type="password" class="form-control" name="cpass" id="cpass" maxlength="15">
-                        <small id="errorcpass" style="color:#ff0000;display:block"></small>
-			</form>
-</div>
-						<input type="submit" value="Submit" id="btnsubmit" form="signupform">
+						<input type="email"  class="form-control" name="email" id="email" maxlength="50">
+						<small id="erroremail" style="color:#ff0000;display:block"></small>
+						<b>Username*:</b>
+						<small style="color:#2373a5"><br>8-15 Characters, Alphanumeric Characters</small>
+						<input type="text" class="form-control" name="username" id="username" maxlength="15">
+						<small id="errorusername" style="color:#ff0000;display:block"></small>
+						<b>Password*:</b>
+						<small style="color:#2373a5"><br>8-15 Characters, Alphanumeric Characters</small>
+						<input type="password" class="form-control" name="pass" id="pass" maxlength="15">
+						<small id="errorpass" style="color:#ff0000;display:block"></small>
+						<b>Confirm Password*:</b>
+						<input type="password" class="form-control" name="cpass" id="cpass" maxlength="15">
+						<small id="errorcpass" style="color:#ff0000;display:block"></small>
+					</form>
 				</div>
+				<input type="submit" value="Submit" id="btnsubmit" form="signupform">
+			</div>
 			<button id="hideReg"><small id="change">Register Here</small></button>
-		<button id="hideReg2" style="display:none;"><small id="change">Cancel</small></button>
-</div>
-</div>
-	
-	<script>
-	
-	
-	 //Switches from Login to Registration
-     $("#hideReg").click(function(){
-	 $(this).hide();
-					$.mobile.loading('show');
-					$("#hideme").slideToggle();
-						$("#toggle").slideToggle(function(){
-								$.mobile.loading('hide');
-							
-						});
-						$("#hideReg2").show();
-     });
-	 
-	 $("#hideReg2").click(function(){
-	 $(this).hide();
-					$.mobile.loading('show');
-					$("#hideme").slideToggle();
-						$("#toggle").slideToggle(function(){
-								$.mobile.loading('hide');
-							
-						});
-						$("#hideReg").show();
-     });
-	 
-					$("#hideReg1").click(function(){
-							$.mobile.loading('show');
-							location.href="index.html";
-							$.mobile.loading('hide');
-     });
-	
-	//jQuery Validate Plugin
-	var form = $("#signupform");
-         form.validate({
-         				errorPlacement: function ($error, $element) {
-         					var name = $element.attr("name");
-         					$("#error" + name).html($error);
-         				},
-         				rules: {
-         					fullname: {
-         						required: true,
-         						minlength: 1
-         					},
-         					
-         					email: {
-         						required: true,
-         						email: true
-         					},
-         					
-         					username: {
-         						required: true,
-         						minlength: 8
-         					},
-         					pass: {
-         						required: true,
-         						minlength: 8
-         					},
-         					cpass: {
-         						required: true,
-         						minlength: 8,
-         						equalTo: "#pass"
-         					}
-         				
-         				},
-         				messages: {
-         					fullname: {
-         						required: "Please enter your Full Name"
-         					},
-         					
-         					email: "Please enter a valid email address",
-         				
-         					username: {
-         						required: "Please enter a valid username",
-         						minlength: "Your username must be at least 8 characters long"
-         					},
-         					pass: {
-         						required: "Please provide a password",
-         						minlength: "Your password must be at least 8 characters long"
-         					},
-         					cpass: {
-         						required: "Please provide a password",
-         						minlength: "Your password must be at least 8 characters long",
-         						equalTo: "Passwords does not match"
-         					},
-         					
-         				}
-         		});
-//checks if form is valid
-function registeruser()
-         		{
-         		//checks if form is valid
-         		if(form.valid)
-         			{	
-         			
-         			// validate if email and/or username exists in the database
-         				$.getJSON("http://gordoncollege-library.com/crime/phpfiles/userval.php?callback=?", form.serialize() ,function(data)
-         				{
-         			
-         				// uexists = username exists
-         				if(data.uexists =="exists")
-         				{
-         				$("body").scrollTop($("#username").offset().top);
-         				$("#errorusename").text("");
-         				$("#errorusername").append("Username <b>"+ data.username + "</b> is already in use, use another username<br>");
-         				}
-         				else
-         				{
-         				$.getJSON("http://gordoncollege-library.com/crime/phpfiles/uregister.php?callback=?", form.serialize(),function(data)
-         				{
-							location.href="index.html";
-         				}).fail(function(data){
-         				alert("failed");
-         				});
-         				}
-         				
-         				}).fail(function(data){
-         				
-         				alert("validation failed");
-         				
-         		});
-         			}
-         		}
-
- // login verification function
-         var lform = $("#hideme");
-         		function verifyfirst(){
-         		if($( "#lusername" ).val() == "" || $( "#lpass" ).val() == "")
-         		{
-         		return;
-         		}
-         			
-         		
-         			$.getJSON("http://gordoncollege-library.com/crime/phpfiles/verifyfirst.php?callback=?", lform.serialize(),function(data)
-         			{
-         				if (data.verified == "v1")
-         				{
-         				localStorage.setItem("datauser", data.username);
-         				location.href="post.html";
-         				}
-         				else
-         				{
-         				alert("problem with your Account please try again.")
-         				}
-         			}).fail(function(data){
-         				alert("failed to log in");
-         				
-         			});
-         		}
-
-
-setTimeout(function(){
-         if(localStorage.getItem("datauser") === null || localStorage.getItem("datauser") == "") //checks if theres an account logged-in
-         	{
-         	//do nothing
-         	}
-         else
-         	{
-         	location.href="post.html";
-         	}
-         },1000);
-
-</script>
+			<button id="hideReg2" style="display:none;"><small id="change">Cancel</small></button>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
+	<script src="js/jquery_validate.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
